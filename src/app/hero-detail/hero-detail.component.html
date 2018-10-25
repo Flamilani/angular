@@ -1,3 +1,15 @@
-<p>
-  hero-detail works!
-</p>
+<div *ngIf="hero">
+    <mat-card class="heroes">
+      <mat-card-title class="title">{{hero.name | uppercase }} Details</mat-card-title>
+      <mat-card-content>
+        <div>
+        <span>id:</span> {{hero.id}}
+        </div>
+        <label>name:
+            <input [(ngModel)]="hero.name" placeholder="name">
+          </label>
+          <button (click)="goBack()" mat-button>Voltar</button>
+      </mat-card-content>
+    </mat-card>
+    </div>
+

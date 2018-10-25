@@ -1,0 +1,13 @@
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Top Heroes</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+          <div>
+            <h4>{{hero.name}}</h4>
+          </div>
+        </a>
+    </mat-card-content>
+  </mat-card>
